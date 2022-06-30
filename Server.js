@@ -3,7 +3,10 @@ const cors = require('cors');
 const express = require('express');
 const db = require('./db');
 
-const port = 9000;
+let port = process.env.PORT;
+   if (port == null || port == "") {
+   port = 9000;
+}
 const app = express();
 //file system
 const host = '0.0.0.0';
