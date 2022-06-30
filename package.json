@@ -2,7 +2,7 @@
    "name": "hello-world-server",
    "private": true,
    "scripts": {
-      "start": "node server.js"
+      "start": "node Server.js"
    },
    "dependencies": {
       "apollo-server-express": "^1.4.0",
