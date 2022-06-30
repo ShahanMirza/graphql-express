@@ -6,6 +6,7 @@ const db = require('./db');
 const port = 9000;
 const app = express();
 //file system
+const host = '0.0.0.0';
 const fs = require('fs')
 const typeDefs = fs.readFileSync('./schema.graphql',{encoding:'utf-8'})
 const resolvers = require('./resolvers')
@@ -20,7 +21,7 @@ app.use('/graphql',graphqlExpress({schema}))
 app.use('/graphiql',graphiqlExpress({endpointURL:'/graphql'}))
 
 app.listen(
-   port, () => console.info(
+   port, host,() => console.info(
       `Server started on port ${port}`
    )
 );
