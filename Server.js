@@ -14,7 +14,7 @@ const {makeExecutableSchema} = require('graphql-tools')
 const schema = makeExecutableSchema({typeDefs, resolvers})
 
 app.use(cors(), bodyParser.json());
-
+//test commment
 const  {graphiqlExpress,graphqlExpress} = require('apollo-server-express')
 app.use('/graphql',graphqlExpress({schema}))
 app.use('/graphiql',graphiqlExpress({endpointURL:'/graphql'}))
