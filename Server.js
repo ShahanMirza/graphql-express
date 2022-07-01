@@ -22,7 +22,7 @@ app.use(cors(), bodyParser.json());
 const  {graphiqlExpress,graphqlExpress} = require('apollo-server-express')
 app.use('/graphql',graphqlExpress({schema}))
 app.use('/graphiql',graphiqlExpress({endpointURL:'/graphql'}))
-
+//add host to start server
 app.listen(
    port, host,() => console.info(
       `Server started on port ${port}`
